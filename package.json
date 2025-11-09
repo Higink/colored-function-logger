@@ -1,7 +1,7 @@
 {
   "name": "colored-function-logger",
-  "version": "1.0.0",
-  "description": "A logger that automatically displays the calling function name with colors",
+  "version": "1.0.1",
+  "description": "A very light logger that automatically displays the calling function name with colors",
   "repository": {
     "type": "git",
     "url": "https://github.com/Higink/colored-function-logger"
@@ -20,12 +20,16 @@
     "node": ">=20.18.1"
   },
   "main": "dist/src/index.js",
-  "files": [],
+  "files": [
+    "dist/**/*",
+    "!dist/tests",
+    "!dist/tests/**/*"
+  ],
   "scripts": {
     "test": "jest",
     "lint": "eslint",
     "build": "tsc",
-    "prepublishOnly": "npm run build"
+    "prepare": "npm run build"
   },
   "devDependencies": {
     "@jest/globals": "^30.2.0",
