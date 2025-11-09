@@ -1,0 +1,42 @@
+{
+  "name": "colored-function-logger",
+  "version": "1.0.1",
+  "description": "A very light logger that automatically displays the calling function name with colors",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Higink/colored-function-logger"
+  },
+  "license": "CC BY-NC-SA",
+  "author": "Higink <higink@gmail.com>",
+  "type": "module",
+  "keywords": [
+    "logger",
+    "console",
+    "log",
+    "color",
+    "debug"
+  ],
+  "engines": {
+    "node": ">=20.18.1"
+  },
+  "main": "dist/src/index.js",
+  "files": [
+    "dist/**/*",
+    "!dist/tests",
+    "!dist/tests/**/*"
+  ],
+  "scripts": {
+    "test": "jest",
+    "lint": "eslint",
+    "build": "tsc",
+    "prepare": "npm run build"
+  },
+  "devDependencies": {
+    "@jest/globals": "^30.2.0",
+    "@types/jest": "^30.0.0",
+    "@types/node": "^20.0.0",
+    "jest": "^30.2.0",
+    "ts-jest": "^29.4.5",
+    "typescript": "^5.0.0"
+  }
+}

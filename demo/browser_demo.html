@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colored Function Logger</title>
+</head>
+<body>
+<h1>Open the console (F12, right click or CTRL + SHIFT + I)</h1>
+
+<script type="module">
+    import logger from '../dist/src/index.js';
+
+    function randomFunction() {
+        logger.log('This is test message');
+    }
+    randomFunction();
+
+    function anotherAgainFunction() {
+        logger.info('This is a log from another function');
+    }
+    anotherAgainFunction();
+
+    function yetAnotherFunction() {
+        logger.warn('This is a warning log from yet another function');
+    }
+    yetAnotherFunction();
+
+    function otherOtherFunction() {
+        logger.error('This is an error log from other function');
+    }
+    otherOtherFunction();
+
+    function againAFunction() {
+        logger.debug('This is a log from another function');
+    }
+    againAFunction();
+
+
+
+    class customService {
+        start() {
+            logger.log('Service init');
+        }
+
+        end() {
+            logger.log('Service end');
+        }
+    }
+
+    const service = new customService();
+    service.start();
+    service.end();
+
+    function displayInfo() {
+        logger.log('Info:', {firstName: 'John', lastName: 'Doe', age: 30}, [1, 2, 3]);
+    }
+    displayInfo();
+</script>
+</body>
+</html>
+
